@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		160B4DE315E6B7930024AD28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160B4DE215E6B7930024AD28 /* UIKit.framework */; };
+		160B4DE515E6B7930024AD28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160B4DE415E6B7930024AD28 /* Foundation.framework */; };
+		160B4DE715E6B7930024AD28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160B4DE615E6B7930024AD28 /* CoreGraphics.framework */; };
+		160B4DED15E6B7930024AD28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 160B4DEB15E6B7930024AD28 /* InfoPlist.strings */; };
+		160B4DEF15E6B7930024AD28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B4DEE15E6B7930024AD28 /* main.m */; };
+		160B4DF315E6B7930024AD28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B4DF215E6B7930024AD28 /* AppDelegate.m */; };
+		160B4DFA15E6B7AB0024AD28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160B4DF915E6B7AB0024AD28 /* QuartzCore.framework */; };
+		160B4DFD15E6B8400024AD28 /* Asteroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B4DFC15E6B8400024AD28 /* Asteroid.m */; };
+		160B4E0015E6BB920024AD28 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B4DFF15E6BB920024AD28 /* GameView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		160B4DDE15E6B7930024AD28 /* Asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		160B4DE215E6B7930024AD28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		160B4DE415E6B7930024AD28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		160B4DE615E6B7930024AD28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		160B4DEA15E6B7930024AD28 /* Asteroids-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Asteroids-Info.plist"; sourceTree = "<group>"; };
+		160B4DEC15E6B7930024AD28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		160B4DEE15E6B7930024AD28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		160B4DF015E6B7930024AD28 /* Asteroids-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Asteroids-Prefix.pch"; sourceTree = "<group>"; };
+		160B4DF115E6B7930024AD28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		160B4DF215E6B7930024AD28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		160B4DF915E6B7AB0024AD28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		160B4DFB15E6B8400024AD28 /* Asteroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asteroid.h; sourceTree = "<group>"; };
+		160B4DFC15E6B8400024AD28 /* Asteroid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asteroid.m; sourceTree = "<group>"; };
+		160B4DFE15E6BB920024AD28 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		160B4DFF15E6BB920024AD28 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		160B4DDB15E6B7930024AD28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				160B4DFA15E6B7AB0024AD28 /* QuartzCore.framework in Frameworks */,
+				160B4DE315E6B7930024AD28 /* UIKit.framework in Frameworks */,
+				160B4DE515E6B7930024AD28 /* Foundation.framework in Frameworks */,
+				160B4DE715E6B7930024AD28 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		160B4DD315E6B7930024AD28 = {
+			isa = PBXGroup;
+			children = (
+				160B4DF915E6B7AB0024AD28 /* QuartzCore.framework */,
+				160B4DE815E6B7930024AD28 /* Circles */,
+				160B4DE115E6B7930024AD28 /* Frameworks */,
+				160B4DDF15E6B7930024AD28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		160B4DDF15E6B7930024AD28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				160B4DDE15E6B7930024AD28 /* Asteroids.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		160B4DE115E6B7930024AD28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				160B4DE215E6B7930024AD28 /* UIKit.framework */,
+				160B4DE415E6B7930024AD28 /* Foundation.framework */,
+				160B4DE615E6B7930024AD28 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		160B4DE815E6B7930024AD28 /* Circles */ = {
+			isa = PBXGroup;
+			children = (
+				160B4DF115E6B7930024AD28 /* AppDelegate.h */,
+				160B4DFB15E6B8400024AD28 /* Asteroid.h */,
+				160B4DFC15E6B8400024AD28 /* Asteroid.m */,
+				160B4DF215E6B7930024AD28 /* AppDelegate.m */,
+				160B4DFE15E6BB920024AD28 /* GameView.h */,
+				160B4DFF15E6BB920024AD28 /* GameView.m */,
+				160B4DE915E6B7930024AD28 /* Supporting Files */,
+			);
+			path = Circles;
+			sourceTree = "<group>";
+		};
+		160B4DE915E6B7930024AD28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				160B4DEA15E6B7930024AD28 /* Asteroids-Info.plist */,
+				160B4DEB15E6B7930024AD28 /* InfoPlist.strings */,
+				160B4DEE15E6B7930024AD28 /* main.m */,
+				160B4DF015E6B7930024AD28 /* Asteroids-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		160B4DDD15E6B7930024AD28 /* Asteroids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 160B4DF615E6B7930024AD28 /* Build configuration list for PBXNativeTarget "Asteroids" */;
+			buildPhases = (
+				160B4DDA15E6B7930024AD28 /* Sources */,
+				160B4DDB15E6B7930024AD28 /* Frameworks */,
+				160B4DDC15E6B7930024AD28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Asteroids;
+			productName = Circles;
+			productReference = 160B4DDE15E6B7930024AD28 /* Asteroids.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		160B4DD515E6B7930024AD28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Kris Fields";
+			};
+			buildConfigurationList = 160B4DD815E6B7930024AD28 /* Build configuration list for PBXProject "Asteroids" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 160B4DD315E6B7930024AD28;
+			productRefGroup = 160B4DDF15E6B7930024AD28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				160B4DDD15E6B7930024AD28 /* Asteroids */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		160B4DDC15E6B7930024AD28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				160B4DED15E6B7930024AD28 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		160B4DDA15E6B7930024AD28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				160B4DEF15E6B7930024AD28 /* main.m in Sources */,
+				160B4DF315E6B7930024AD28 /* AppDelegate.m in Sources */,
+				160B4DFD15E6B8400024AD28 /* Asteroid.m in Sources */,
+				160B4E0015E6BB920024AD28 /* GameView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		160B4DEB15E6B7930024AD28 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				160B4DEC15E6B7930024AD28 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		160B4DF415E6B7930024AD28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		160B4DF515E6B7930024AD28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		160B4DF715E6B7930024AD28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Circles/Asteroids-Prefix.pch";
+				INFOPLIST_FILE = "Circles/Asteroids-Info.plist";
+				PRODUCT_NAME = Asteroids;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		160B4DF815E6B7930024AD28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Circles/Asteroids-Prefix.pch";
+				INFOPLIST_FILE = "Circles/Asteroids-Info.plist";
+				PRODUCT_NAME = Asteroids;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		160B4DD815E6B7930024AD28 /* Build configuration list for PBXProject "Asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				160B4DF415E6B7930024AD28 /* Debug */,
+				160B4DF515E6B7930024AD28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		160B4DF615E6B7930024AD28 /* Build configuration list for PBXNativeTarget "Asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				160B4DF715E6B7930024AD28 /* Debug */,
+				160B4DF815E6B7930024AD28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 160B4DD515E6B7930024AD28 /* Project object */;
+}
