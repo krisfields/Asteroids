@@ -8,11 +8,16 @@
 
 #import "GameView.h"
 #import "Asteroid.h"
+#import "Ship.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface GameView ()
+@interface GameView () <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *asteroids;
-
+@property (nonatomic, strong) Ship* ship;
+@property (nonatomic, strong) NSTimer *collisionTimer;
+@property int score;
+@property BOOL addAnotherAsteroid;
 @end
 
 @implementation GameView
@@ -21,24 +26,99 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.asteroids = [NSMutableArray new];
         
-        for (int i=0; i<202; i++) {
-            double xPos = ((double) arc4random() / UINT_MAX) * (frame.size.width);
-            double yPos = ((double) arc4random() / UINT_MAX) * (frame.size.height);
-            Asteroid *newAsteroid = [Asteroid drawAsteroidWithPosition:CGPointMake(xPos, yPos) withView:self];
-            [self.asteroids addObject:newAsteroid];
-        }
+        self.ship = [Ship drawShipWithPosition:CGPointMake(160, 300) withView:self];
+
+        [self setupGame];
+
     }
     return self;
 }
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)setupGame
 {
     for (Asteroid* asteroid in self.asteroids){
-        [asteroid move];
+        [asteroid.layer removeFromSuperlayer];
+        
+    }
+    self.asteroids = [NSMutableArray new];
+    self.score = 0;
+    self.addAnotherAsteroid = NO;
+    for (int i=0; i<1; i++) {
+        Asteroid *newAsteroid = [Asteroid drawAsteroidWithPosition:CGPointMake(0.0, 0.0) withView:self];
+        [self.asteroids addObject:newAsteroid];
+        
+    }
+    self.collisionTimer = [NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(collision:) userInfo:nil repeats:YES];
+
+    
+}
+-(void)collision:(NSDictionary *)notUsed
+{
+    for (Asteroid* asteroid in self.asteroids) {
+        CALayer *asteroidPresentationLayer = [asteroid.layer presentationLayer];
+        if (CGRectIntersectsRect(asteroidPresentationLayer.frame, self.ship.layer.frame)) {
+            [self.collisionTimer invalidate];
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle: @"You lose. :("
+                                  message: @"Try again?"
+                                  delegate: self
+                                  cancelButtonTitle:@"YES!"
+                                  otherButtonTitles:nil];
+                        
+
+            [alert show];
+
+        }
     }
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self setupGame];
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch* touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self];
+    for (Asteroid* asteroid in self.asteroids) {
+        CALayer *asteroidPresentationLayer = [asteroid.layer presentationLayer];
+        if (CGRectContainsPoint(asteroidPresentationLayer.frame, touchPoint)) {
+            
+            [self increaseScore];
+            [asteroid.layer removeFromSuperlayer];
+            [self.asteroids removeObject:asteroid];
+            [self replaceAsteroids];
+            break;
+        }
+    }
+}
+-(void)replaceAsteroids
+{
+    int numberOfReplacementAsteroids = 1;
+    if (self.addAnotherAsteroid)
+    {
+        numberOfReplacementAsteroids +=1;
+        self.addAnotherAsteroid = NO;
+    }
+    for (int i=0; i< numberOfReplacementAsteroids; i++) {
+        Asteroid *newAsteroid = [Asteroid drawAsteroidWithPosition:CGPointMake(0.0, 0.0) withView:self];
+        [self.asteroids addObject:newAsteroid];
+        
+    }
+}
+-(void)increaseScore
+{
+    self.score += 100;
+    if (self.score % 1000 == 0){
+        self.addAnotherAsteroid = YES;
+    }
+        
+}
+//- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    for (Asteroid* asteroid in self.asteroids){
+//        [asteroid move];
+//    }
+//}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

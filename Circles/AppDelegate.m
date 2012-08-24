@@ -17,7 +17,7 @@
     // Override point for customization after application launch.
     self.window.rootViewController = [UIViewController new];
     self.window.rootViewController.view = [[GameView alloc]initWithFrame:self.window.bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
