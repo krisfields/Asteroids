@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ship.h"
 
 @protocol GameViewDelegate <NSObject>
 
@@ -17,5 +18,8 @@
 @interface GameView : UIView
 @property BOOL addAnotherAsteroid;
 @property id<GameViewDelegate> delegate;
+@property (nonatomic, strong) Ship* ship;
+@property (nonatomic, strong) NSTimer *collisionTimer;
+
 -(void)setupGame;
 @end

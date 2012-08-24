@@ -47,8 +47,12 @@
 }
 -(void)gameWin
 {
+    [self.gv.collisionTimer invalidate];
     self.highScore = self.score;
     self.highScoreOutlet.text = [NSString stringWithFormat:@"High Score: %d",self.highScore];
+    UIImage *layerImage = [UIImage imageNamed:@"donut.gif"];
+    CGImageRef image = [layerImage CGImage];
+    [self.gv.ship.layer setContents:(__bridge id)image];
     self.levelOutlet.text = @"Holy Fuck. You won!!";
     [self changeOpacityLevel];
     [self bounceLevel];
@@ -59,8 +63,7 @@
                           delegate: self
                           cancelButtonTitle:@"Fuck that.  I'm playing again!"
                           otherButtonTitles:nil];
-    
-    
+    alert.transform = CGAffineTransformTranslate( alert.transform, 0.0, -100.0 );
     [alert show];
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -131,6 +134,9 @@
     self.highScore = 0;
     levelOutlet.alpha = 0.0;
     self.gv = [[GameView alloc]initWithFrame:self.view.bounds];
+    UIImage *layerImage = [UIImage imageNamed:@"mwa320x480stars4.gif"];
+    CGImageRef image = [layerImage CGImage];
+    [self.gv.layer setContents:(__bridge id)image];
     self.gv.delegate = self;
     [self.view insertSubview:self.gv atIndex:0];
     [self changeOpacityLevel];

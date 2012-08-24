@@ -14,8 +14,7 @@
 @interface GameView () <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *asteroids;
-@property (nonatomic, strong) Ship* ship;
-@property (nonatomic, strong) NSTimer *collisionTimer;
+
 
 
 @end
