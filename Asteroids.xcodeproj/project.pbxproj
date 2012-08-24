@@ -20,6 +20,8 @@
 		161C1FFE15E6EFF40057308D /* rocketShip.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 161C1FFD15E6EFF40057308D /* rocketShip.jpeg */; };
 		161C200615E6F8420057308D /* HypnoPac2.png in Resources */ = {isa = PBXBuildFile; fileRef = 161C200515E6F8420057308D /* HypnoPac2.png */; };
 		161C200815E6FC3A0057308D /* asteroid.png in Resources */ = {isa = PBXBuildFile; fileRef = 161C200715E6FC390057308D /* asteroid.png */; };
+		1677502415E7530000D14CD6 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1677502315E7530000D14CD6 /* ScoreViewController.xib */; };
+		1677502715E753A600D14CD6 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677502615E753A600D14CD6 /* ScoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		161C1FFD15E6EFF40057308D /* rocketShip.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rocketShip.jpeg; sourceTree = "<group>"; };
 		161C200515E6F8420057308D /* HypnoPac2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HypnoPac2.png; sourceTree = "<group>"; };
 		161C200715E6FC390057308D /* asteroid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asteroid.png; sourceTree = "<group>"; };
+		1677502315E7530000D14CD6 /* ScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
+		1677502515E753A600D14CD6 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		1677502615E753A600D14CD6 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +96,16 @@
 		160B4DE815E6B7930024AD28 /* Circles */ = {
 			isa = PBXGroup;
 			children = (
+				1677502515E753A600D14CD6 /* ScoreViewController.h */,
+				1677502615E753A600D14CD6 /* ScoreViewController.m */,
+				1677502315E7530000D14CD6 /* ScoreViewController.xib */,
 				161C1FFD15E6EFF40057308D /* rocketShip.jpeg */,
 				160B4DF115E6B7930024AD28 /* AppDelegate.h */,
+				160B4DF215E6B7930024AD28 /* AppDelegate.m */,
 				160B4DFB15E6B8400024AD28 /* Asteroid.h */,
 				160B4DFC15E6B8400024AD28 /* Asteroid.m */,
 				161C200715E6FC390057308D /* asteroid.png */,
 				161C200515E6F8420057308D /* HypnoPac2.png */,
-				160B4DF215E6B7930024AD28 /* AppDelegate.m */,
 				160B4DFE15E6BB920024AD28 /* GameView.h */,
 				160B4DFF15E6BB920024AD28 /* GameView.m */,
 				161C1FF915E6EEDD0057308D /* Ship.h */,
@@ -173,6 +181,7 @@
 				161C1FFE15E6EFF40057308D /* rocketShip.jpeg in Resources */,
 				161C200615E6F8420057308D /* HypnoPac2.png in Resources */,
 				161C200815E6FC3A0057308D /* asteroid.png in Resources */,
+				1677502415E7530000D14CD6 /* ScoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +197,7 @@
 				160B4DFD15E6B8400024AD28 /* Asteroid.m in Sources */,
 				160B4E0015E6BB920024AD28 /* GameView.m in Sources */,
 				161C1FFB15E6EEDD0057308D /* Ship.m in Sources */,
+				1677502715E753A600D14CD6 /* ScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

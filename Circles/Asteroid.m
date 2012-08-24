@@ -87,20 +87,19 @@
     }
 
 
-//        double xPos = ((double) arc4random() / UINT_MAX) * (self.layer.superlayer.bounds.size.width);
-//        double yPos = ((double) arc4random() / UINT_MAX) * (self.layer.superlayer.bounds.size.height);
         [self.layer setPosition:CGPointMake(xPos, yPos)];
 
     [CATransaction commit];
-//    CABasicAnimation *spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-//    [spin setDelegate:self];
-//    [spin setToValue:[NSNumber numberWithFloat:M_PI*2]];
-//    [spin setDuration:1.3];
-//    
-//    CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    [spin setTimingFunction:tf];
-//    
-//    [self.layer addAnimation:spin forKey:@"spinAnimation"];
+    CABasicAnimation *spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    [spin setDelegate:self];
+    [spin setToValue:[NSNumber numberWithFloat:M_PI*((arc4random() % 10)+2)]];
+    [spin setDuration:4.3];
+    
+    CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [spin setTimingFunction:tf];
+    
+    [self.layer addAnimation:spin forKey:@"spinAnimation"];
 }
+
 
 @end

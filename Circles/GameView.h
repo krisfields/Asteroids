@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameView : UIView
+@protocol GameViewDelegate <NSObject>
 
+-(void)asteroidDestroyed;
+-(void)gameOver;
+
+@end
+@interface GameView : UIView
+@property BOOL addAnotherAsteroid;
+@property id<GameViewDelegate> delegate;
+-(void)setupGame;
 @end

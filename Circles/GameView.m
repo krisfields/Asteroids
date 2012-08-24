@@ -16,8 +16,8 @@
 @property (nonatomic, strong) NSMutableArray *asteroids;
 @property (nonatomic, strong) Ship* ship;
 @property (nonatomic, strong) NSTimer *collisionTimer;
-@property int score;
-@property BOOL addAnotherAsteroid;
+
+
 @end
 
 @implementation GameView
@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.ship = [Ship drawShipWithPosition:CGPointMake(160, 300) withView:self];
+        self.ship = [Ship drawShipWithPosition:CGPointMake(160, 240) withView:self];
 
         [self setupGame];
 
@@ -41,8 +41,8 @@
         
     }
     self.asteroids = [NSMutableArray new];
-    self.score = 0;
     self.addAnotherAsteroid = NO;
+//    [self.delegate gameOver];
     for (int i=0; i<1; i++) {
         Asteroid *newAsteroid = [Asteroid drawAsteroidWithPosition:CGPointMake(0.0, 0.0) withView:self];
         [self.asteroids addObject:newAsteroid];
@@ -58,23 +58,13 @@
         CALayer *asteroidPresentationLayer = [asteroid.layer presentationLayer];
         if (CGRectIntersectsRect(asteroidPresentationLayer.frame, self.ship.layer.frame)) {
             [self.collisionTimer invalidate];
-            UIAlertView *alert = [[UIAlertView alloc]
-                                  initWithTitle: @"You lose. :("
-                                  message: @"Try again?"
-                                  delegate: self
-                                  cancelButtonTitle:@"YES!"
-                                  otherButtonTitles:nil];
-                        
-
-            [alert show];
+            [self.delegate gameOver];
+            break;
 
         }
     }
 }
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [self setupGame];
-}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch* touch = [touches anyObject];
@@ -82,11 +72,12 @@
     for (Asteroid* asteroid in self.asteroids) {
         CALayer *asteroidPresentationLayer = [asteroid.layer presentationLayer];
         if (CGRectContainsPoint(asteroidPresentationLayer.frame, touchPoint)) {
-            
-            [self increaseScore];
+
+//            [self increaseScore];
             [asteroid.layer removeFromSuperlayer];
             [self.asteroids removeObject:asteroid];
             [self replaceAsteroids];
+            [self.delegate asteroidDestroyed];
             break;
         }
     }
@@ -105,14 +96,14 @@
         
     }
 }
--(void)increaseScore
-{
-    self.score += 100;
-    if (self.score % 1000 == 0){
-        self.addAnotherAsteroid = YES;
-    }
-        
-}
+//-(void)increaseScore
+//{
+//    self.score += 100;
+//    if (self.score % 1000 == 0){
+//        self.addAnotherAsteroid = YES;
+//    }
+//        
+//}
 //- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 //{
 //    for (Asteroid* asteroid in self.asteroids){
