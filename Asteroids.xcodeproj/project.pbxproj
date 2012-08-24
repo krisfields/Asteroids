@@ -22,6 +22,7 @@
 		161C200815E6FC3A0057308D /* asteroid.png in Resources */ = {isa = PBXBuildFile; fileRef = 161C200715E6FC390057308D /* asteroid.png */; };
 		1677502415E7530000D14CD6 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1677502315E7530000D14CD6 /* ScoreViewController.xib */; };
 		1677502715E753A600D14CD6 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677502615E753A600D14CD6 /* ScoreViewController.m */; };
+		1677502D15E7736500D14CD6 /* asteroid_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1677502C15E7736400D14CD6 /* asteroid_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		1677502315E7530000D14CD6 /* ScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
 		1677502515E753A600D14CD6 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		1677502615E753A600D14CD6 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
+		1677502C15E7736400D14CD6 /* asteroid_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asteroid_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		160B4DD315E6B7930024AD28 = {
 			isa = PBXGroup;
 			children = (
+				1677502C15E7736400D14CD6 /* asteroid_icon.png */,
 				160B4DF915E6B7AB0024AD28 /* QuartzCore.framework */,
 				160B4DE815E6B7930024AD28 /* Circles */,
 				160B4DE115E6B7930024AD28 /* Frameworks */,
@@ -182,6 +185,7 @@
 				161C200615E6F8420057308D /* HypnoPac2.png in Resources */,
 				161C200815E6FC3A0057308D /* asteroid.png in Resources */,
 				1677502415E7530000D14CD6 /* ScoreViewController.xib in Resources */,
+				1677502D15E7736500D14CD6 /* asteroid_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
