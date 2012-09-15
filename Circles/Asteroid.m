@@ -34,15 +34,15 @@
     newAsteroid.layer = [CALayer new];
     newAsteroid.layer.bounds = CGRectMake(0.0, 0.0, 40.0, 42.0);
     newAsteroid.layer.position = position;
-    newAsteroid.layer.delegate = newAsteroid;
+//    newAsteroid.layer.delegate = newAsteroid;
     [newAsteroid.layer setNeedsDisplay];
     
-    UIImage *layerImage = [UIImage imageNamed:@"asteroid.png"];
+    __weak UIImage *layerImage = [UIImage imageNamed:@"asteroid.png"];
     CGImageRef image = [layerImage CGImage];
     [newAsteroid.layer setContents:(__bridge id)image];
     
     [view.layer addSublayer:newAsteroid.layer];
-    
+
     [newAsteroid move];
     return newAsteroid;
 }
@@ -90,12 +90,12 @@
         [self.layer setPosition:CGPointMake(xPos, yPos)];
 
     [CATransaction commit];
-    CABasicAnimation *spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    __weak CABasicAnimation *spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     [spin setDelegate:self];
     [spin setToValue:[NSNumber numberWithFloat:M_PI*((arc4random() % 10)+2)]];
     [spin setDuration:4.3];
     
-    CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    __weak CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [spin setTimingFunction:tf];
     
     [self.layer addAnimation:spin forKey:@"spinAnimation"];

@@ -17,7 +17,7 @@
 @end
 @interface GameView : UIView
 @property BOOL addAnotherAsteroid;
-@property id<GameViewDelegate> delegate;
+@property (weak, nonatomic) id<GameViewDelegate> delegate;
 @property (nonatomic, strong) Ship* ship;
 @property (nonatomic, strong) NSTimer *collisionTimer;
 

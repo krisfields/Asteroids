@@ -94,6 +94,7 @@
         [self.asteroids addObject:newAsteroid];
         
     }
+    
 }
 //-(void)increaseScore
 //{

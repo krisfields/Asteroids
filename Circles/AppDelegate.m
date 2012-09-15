@@ -16,8 +16,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    ScoreViewController *svc = [[ScoreViewController alloc] init];
-    self.window.rootViewController = svc;
+    ScoreViewController *viewController;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        viewController = [[ScoreViewController alloc] initWithNibName:@"ScoreViewController_iPhone" bundle:nil];
+    } else {
+        viewController = [[ScoreViewController alloc] initWithNibName:@"ScoreViewController_iPad" bundle:nil];
+    }
+//    ScoreViewController *svc = [[ScoreViewController alloc] init];
+    self.window.rootViewController = viewController;
 //    self.window.rootViewController.view = [[GameView alloc]initWithFrame:self.window.bounds];
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];

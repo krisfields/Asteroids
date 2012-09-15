@@ -134,6 +134,7 @@
     self.highScore = 0;
     levelOutlet.alpha = 0.0;
     self.gv = [[GameView alloc]initWithFrame:self.view.bounds];
+    NSLog(@"%f, %f", self.view.bounds.size.width, self.view.bounds.size.height);
     UIImage *layerImage = [UIImage imageNamed:@"mwa320x480stars4.gif"];
     CGImageRef image = [layerImage CGImage];
     [self.gv.layer setContents:(__bridge id)image];

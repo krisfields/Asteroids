@@ -18,14 +18,13 @@
 		160B4E0015E6BB920024AD28 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B4DFF15E6BB920024AD28 /* GameView.m */; };
 		161C1FFB15E6EEDD0057308D /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C1FFA15E6EEDD0057308D /* Ship.m */; };
 		161C1FFE15E6EFF40057308D /* rocketShip.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 161C1FFD15E6EFF40057308D /* rocketShip.jpeg */; };
-		161C200615E6F8420057308D /* HypnoPac2.png in Resources */ = {isa = PBXBuildFile; fileRef = 161C200515E6F8420057308D /* HypnoPac2.png */; };
 		161C200815E6FC3A0057308D /* asteroid.png in Resources */ = {isa = PBXBuildFile; fileRef = 161C200715E6FC390057308D /* asteroid.png */; };
-		1677502415E7530000D14CD6 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1677502315E7530000D14CD6 /* ScoreViewController.xib */; };
+		1677502415E7530000D14CD6 /* ScoreViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1677502315E7530000D14CD6 /* ScoreViewController_iPhone.xib */; };
 		1677502715E753A600D14CD6 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677502615E753A600D14CD6 /* ScoreViewController.m */; };
 		1677502D15E7736500D14CD6 /* asteroid_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1677502C15E7736400D14CD6 /* asteroid_icon.png */; };
 		1677502F15E7797900D14CD6 /* donut.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1677502E15E7797900D14CD6 /* donut.gif */; };
-		1677503115E77F0D00D14CD6 /* star-storms.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1677503015E77F0D00D14CD6 /* star-storms.jpeg */; };
 		1677503315E77FD600D14CD6 /* mwa320x480stars4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1677503215E77FD600D14CD6 /* mwa320x480stars4.gif */; };
+		16C1864415EACFAD009F3F1B /* ScoreViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C1864315EACFAD009F3F1B /* ScoreViewController_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,15 +46,14 @@
 		161C1FF915E6EEDD0057308D /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
 		161C1FFA15E6EEDD0057308D /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
 		161C1FFD15E6EFF40057308D /* rocketShip.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rocketShip.jpeg; sourceTree = "<group>"; };
-		161C200515E6F8420057308D /* HypnoPac2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HypnoPac2.png; sourceTree = "<group>"; };
 		161C200715E6FC390057308D /* asteroid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asteroid.png; sourceTree = "<group>"; };
-		1677502315E7530000D14CD6 /* ScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
+		1677502315E7530000D14CD6 /* ScoreViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController_iPhone.xib; sourceTree = "<group>"; };
 		1677502515E753A600D14CD6 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		1677502615E753A600D14CD6 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		1677502C15E7736400D14CD6 /* asteroid_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asteroid_icon.png; sourceTree = "<group>"; };
 		1677502E15E7797900D14CD6 /* donut.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = donut.gif; sourceTree = "<group>"; };
-		1677503015E77F0D00D14CD6 /* star-storms.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "star-storms.jpeg"; sourceTree = "<group>"; };
 		1677503215E77FD600D14CD6 /* mwa320x480stars4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mwa320x480stars4.gif; sourceTree = "<group>"; };
+		16C1864315EACFAD009F3F1B /* ScoreViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +103,11 @@
 		160B4DE815E6B7930024AD28 /* Circles */ = {
 			isa = PBXGroup;
 			children = (
-				1677503015E77F0D00D14CD6 /* star-storms.jpeg */,
 				1677503215E77FD600D14CD6 /* mwa320x480stars4.gif */,
 				1677502515E753A600D14CD6 /* ScoreViewController.h */,
 				1677502615E753A600D14CD6 /* ScoreViewController.m */,
-				1677502315E7530000D14CD6 /* ScoreViewController.xib */,
+				1677502315E7530000D14CD6 /* ScoreViewController_iPhone.xib */,
+				16C1864315EACFAD009F3F1B /* ScoreViewController_iPad.xib */,
 				161C1FFD15E6EFF40057308D /* rocketShip.jpeg */,
 				160B4DF115E6B7930024AD28 /* AppDelegate.h */,
 				1677502E15E7797900D14CD6 /* donut.gif */,
@@ -117,7 +115,6 @@
 				160B4DFB15E6B8400024AD28 /* Asteroid.h */,
 				160B4DFC15E6B8400024AD28 /* Asteroid.m */,
 				161C200715E6FC390057308D /* asteroid.png */,
-				161C200515E6F8420057308D /* HypnoPac2.png */,
 				160B4DFE15E6BB920024AD28 /* GameView.h */,
 				160B4DFF15E6BB920024AD28 /* GameView.m */,
 				161C1FF915E6EEDD0057308D /* Ship.h */,
@@ -191,13 +188,12 @@
 			files = (
 				160B4DED15E6B7930024AD28 /* InfoPlist.strings in Resources */,
 				161C1FFE15E6EFF40057308D /* rocketShip.jpeg in Resources */,
-				161C200615E6F8420057308D /* HypnoPac2.png in Resources */,
 				161C200815E6FC3A0057308D /* asteroid.png in Resources */,
-				1677502415E7530000D14CD6 /* ScoreViewController.xib in Resources */,
+				1677502415E7530000D14CD6 /* ScoreViewController_iPhone.xib in Resources */,
 				1677502D15E7736500D14CD6 /* asteroid_icon.png in Resources */,
 				1677502F15E7797900D14CD6 /* donut.gif in Resources */,
-				1677503115E77F0D00D14CD6 /* star-storms.jpeg in Resources */,
 				1677503315E77FD600D14CD6 /* mwa320x480stars4.gif in Resources */,
+				16C1864415EACFAD009F3F1B /* ScoreViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +282,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Circles/Asteroids-Prefix.pch";
 				INFOPLIST_FILE = "Circles/Asteroids-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Asteroids;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -297,7 +295,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Circles/Asteroids-Prefix.pch";
 				INFOPLIST_FILE = "Circles/Asteroids-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Asteroids;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
